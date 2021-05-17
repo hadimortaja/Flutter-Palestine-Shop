@@ -52,6 +52,10 @@ dependencies:
   localize_and_translate: null
   logger:
   webview_flutter: ^2.0.4
+  provider: ^5.0.0
+  get_storage:
+
+
 
 
 dev_dependencies:

@@ -8,4 +8,5 @@ class AppGet extends GetxController {
     this.indexScreen = value;
     update();
   }
+  
 }
