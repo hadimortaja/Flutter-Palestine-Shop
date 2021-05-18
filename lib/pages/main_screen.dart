@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:palestine_app/server/app_get.dart';
 import 'package:palestine_app/widgets/custom_nav_bar.dart';
 import 'package:palestine_app/pages/more_screen.dart';
+import 'package:palestine_app/pages/cart_screen.dart';
 
 class MainScreen extends StatefulWidget {
   @override
@@ -30,7 +31,7 @@ class PageNav {
   static List<Widget> widgetOptions = <Widget>[
     Container(),
     Container(),
-    Container(),
+    CartScreen(),
     MoreScreen(),
   ];
 }

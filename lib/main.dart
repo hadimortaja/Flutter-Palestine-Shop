@@ -31,6 +31,7 @@ class MyApp extends StatelessWidget {
       designSize: Size(375, 812),
       builder: () {
         return GetMaterialApp(
+          // locale: Locale('ar'),
           theme: Themes.light,
           darkTheme: Themes.dark,
           themeMode: ThemeService().theme,

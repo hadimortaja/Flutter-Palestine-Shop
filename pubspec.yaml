@@ -54,6 +54,8 @@ dependencies:
   webview_flutter: ^2.0.4
   provider: ^5.0.0
   get_storage:
+  flutter_slidable: ^0.6.0
+
 
 
 

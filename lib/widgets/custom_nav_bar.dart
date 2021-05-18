@@ -15,185 +15,182 @@ class CustomNavBottom extends StatelessWidget {
       init: AppGet(),
       builder: (controller) => Directionality(
         textDirection: TextDirection.rtl,
-        child: ClipRRect(
-          borderRadius: BorderRadius.only(topRight: Radius.circular(50.r)),
-          child: BottomNavigationBar(
-            selectedItemColor: Colors.black,
-            elevation: 0,
-            // backgroundColor: Colors.white,
-            currentIndex: controller.indexScreen,
-            onTap: controller.setIndexScreen,
-            showSelectedLabels: false,
-            type: BottomNavigationBarType.fixed,
-            selectedFontSize: 0,
-            unselectedFontSize: 0,
-            items: [
-              BottomNavigationBarItem(
-                activeIcon: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CustomSvgImage(
-                      imageName: 'home',
-                      height: 22.h,
-                      width: 25.w,
-                      color: AppColors.primaryColor,
-                    ),
-                    SizedBox(
-                      height: 5.h,
-                    ),
-                    CustomText(
-                      'الرئيسية',
-                      fontSize: 15.sp,
-                      color: AppColors.primaryColor,
-                    ),
-                  ],
-                ),
-                icon: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CustomSvgImage(
-                      imageName: 'home',
-                      height: 22.h,
-                      width: 25.w,
-                      color: Colors.grey,
-                    ),
-                    SizedBox(
-                      height: 5.h,
-                    ),
-                    CustomText(
-                      'الرئيسية',
-                      fontSize: 15.sp,
-                      color: Colors.grey,
-                    ),
-                  ],
-                ),
-                label: "",
+        child: BottomNavigationBar(
+          selectedItemColor: Colors.black,
+          elevation: 0,
+          // backgroundColor: Colors.white,
+          currentIndex: controller.indexScreen,
+          onTap: controller.setIndexScreen,
+          showSelectedLabels: false,
+          type: BottomNavigationBarType.fixed,
+          selectedFontSize: 0,
+          unselectedFontSize: 0,
+          items: [
+            BottomNavigationBarItem(
+              activeIcon: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomSvgImage(
+                    imageName: 'home',
+                    height: 22.h,
+                    width: 25.w,
+                    color: AppColors.primaryColor,
+                  ),
+                  SizedBox(
+                    height: 5.h,
+                  ),
+                  CustomText(
+                    'الرئيسية',
+                    fontSize: 15.sp,
+                    color: AppColors.primaryColor,
+                  ),
+                ],
               ),
-              BottomNavigationBarItem(
-                activeIcon: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CustomPngImage(
-                      imageName: 'category',
-                      height: 22.h,
-                      width: 25.w,
-                      color: AppColors.primaryColor,
-                    ),
-                    SizedBox(
-                      height: 5.h,
-                    ),
-                    CustomText(
-                      'التصنيفات',
-                      fontSize: 15.sp,
-                      color: AppColors.primaryColor,
-                    ),
-                  ],
-                ),
-                icon: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CustomPngImage(
-                      imageName: 'category',
-                      height: 22.h,
-                      width: 25.w,
-                      color: Colors.grey,
-                    ),
-                    SizedBox(
-                      height: 5.h,
-                    ),
-                    CustomText(
-                      'التصنيفات',
-                      fontSize: 15.sp,
-                      color: Colors.grey,
-                    ),
-                  ],
-                ),
-                label: "",
+              icon: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomSvgImage(
+                    imageName: 'home',
+                    height: 22.h,
+                    width: 25.w,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(
+                    height: 5.h,
+                  ),
+                  CustomText(
+                    'الرئيسية',
+                    fontSize: 15.sp,
+                    color: Colors.grey,
+                  ),
+                ],
               ),
-              BottomNavigationBarItem(
-                activeIcon: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CustomSvgImage(
-                      imageName: 'cart',
-                      height: 22.h,
-                      width: 25.w,
-                      color: AppColors.primaryColor,
-                    ),
-                    SizedBox(
-                      height: 5.h,
-                    ),
-                    CustomText(
-                      'السلة',
-                      fontSize: 15.sp,
-                      color: AppColors.primaryColor,
-                    ),
-                  ],
-                ),
-                icon: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CustomSvgImage(
-                      imageName: 'cart',
-                      height: 22.h,
-                      width: 25.w,
-                      color: Colors.grey,
-                    ),
-                    SizedBox(
-                      height: 5.h,
-                    ),
-                    CustomText(
-                      'السلة',
-                      fontSize: 15.sp,
-                      color: Colors.grey,
-                    ),
-                  ],
-                ),
-                label: "",
+              label: "",
+            ),
+            BottomNavigationBarItem(
+              activeIcon: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomPngImage(
+                    imageName: 'category',
+                    height: 22.h,
+                    width: 25.w,
+                    color: AppColors.primaryColor,
+                  ),
+                  SizedBox(
+                    height: 5.h,
+                  ),
+                  CustomText(
+                    'التصنيفات',
+                    fontSize: 15.sp,
+                    color: AppColors.primaryColor,
+                  ),
+                ],
               ),
-              BottomNavigationBarItem(
-                activeIcon: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CustomSvgImage(
-                      imageName: 'more',
-                      height: 22.h,
-                      width: 25.w,
-                      color: AppColors.primaryColor,
-                    ),
-                    SizedBox(
-                      height: 5.h,
-                    ),
-                    CustomText(
-                      'المزيد',
-                      fontSize: 15.sp,
-                      color: AppColors.primaryColor,
-                    ),
-                  ],
-                ),
-                icon: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    CustomSvgImage(
-                      imageName: 'more',
-                      height: 22.h,
-                      width: 25.w,
-                      color: Colors.grey,
-                    ),
-                    SizedBox(
-                      height: 5.h,
-                    ),
-                    CustomText(
-                      'المزيد',
-                      fontSize: 15.sp,
-                      color: Colors.grey,
-                    ),
-                  ],
-                ),
-                label: "",
+              icon: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomPngImage(
+                    imageName: 'category',
+                    height: 22.h,
+                    width: 25.w,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(
+                    height: 5.h,
+                  ),
+                  CustomText(
+                    'التصنيفات',
+                    fontSize: 15.sp,
+                    color: Colors.grey,
+                  ),
+                ],
               ),
-            ],
-          ),
+              label: "",
+            ),
+            BottomNavigationBarItem(
+              activeIcon: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomSvgImage(
+                    imageName: 'cart',
+                    height: 22.h,
+                    width: 25.w,
+                    color: AppColors.primaryColor,
+                  ),
+                  SizedBox(
+                    height: 5.h,
+                  ),
+                  CustomText(
+                    'السلة',
+                    fontSize: 15.sp,
+                    color: AppColors.primaryColor,
+                  ),
+                ],
+              ),
+              icon: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomSvgImage(
+                    imageName: 'cart',
+                    height: 22.h,
+                    width: 25.w,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(
+                    height: 5.h,
+                  ),
+                  CustomText(
+                    'السلة',
+                    fontSize: 15.sp,
+                    color: Colors.grey,
+                  ),
+                ],
+              ),
+              label: "",
+            ),
+            BottomNavigationBarItem(
+              activeIcon: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomSvgImage(
+                    imageName: 'more',
+                    height: 22.h,
+                    width: 25.w,
+                    color: AppColors.primaryColor,
+                  ),
+                  SizedBox(
+                    height: 5.h,
+                  ),
+                  CustomText(
+                    'المزيد',
+                    fontSize: 15.sp,
+                    color: AppColors.primaryColor,
+                  ),
+                ],
+              ),
+              icon: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CustomSvgImage(
+                    imageName: 'more',
+                    height: 22.h,
+                    width: 25.w,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(
+                    height: 5.h,
+                  ),
+                  CustomText(
+                    'المزيد',
+                    fontSize: 15.sp,
+                    color: Colors.grey,
+                  ),
+                ],
+              ),
+              label: "",
+            ),
+          ],
         ),
       ),
     );

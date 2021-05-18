@@ -1,0 +1,149 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_slidable/flutter_slidable.dart';
+import 'package:get/get.dart';
+import 'package:palestine_app/widgets/custom_image.dart';
+import 'package:palestine_app/widgets/custom_text.dart';
+
+class FullCart extends StatefulWidget {
+  @override
+  _FullCartState createState() => _FullCartState();
+}
+
+class _FullCartState extends State<FullCart> {
+  SlidableController slidableController;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: 15.w),
+          child: Slidable(
+            actionPane: SlidableDrawerActionPane(),
+            actions: [
+              Padding(
+                padding: EdgeInsets.only(right: 10.w),
+                child: GestureDetector(
+                  onTap: () {
+                    print("delete");
+                  },
+                  child: Directionality(
+                    textDirection: TextDirection.rtl,
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.delete,
+                          size: 25.h,
+                          color: Colors.red[300],
+                        ),
+                        SizedBox(
+                          width: 10.w,
+                        ),
+                        CustomText(
+                          "حذف",
+                          color: Colors.red[300],
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              )
+            ],
+            child: Container(
+              height: 100.h,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20.r),
+                  border: Border.all(color: Colors.grey[300])),
+              child: Directionality(
+                textDirection: TextDirection.rtl,
+                child: Row(
+                  children: [
+                    Container(
+                      width: 100.w,
+                      height: 100.h,
+                      decoration: BoxDecoration(
+                          image: DecorationImage(
+                              fit: BoxFit.fill,
+                              image: AssetImage('assets/images/product.png')),
+                          borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(20.r),
+                              bottomRight: Radius.circular(20.r))),
+                    ),
+                    SizedBox(
+                      width: 15.w,
+                    ),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        CustomText("تايتل 1 1 1"),
+                        // Spacer(),
+
+                        CustomText("السعر : 25 شيكل"),
+                        Row(
+                          children: [
+                            CustomText("الكمية"),
+                            SizedBox(
+                              width: 80.w,
+                            ),
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                height: 24.h,
+                                width: 22.w,
+                                decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.grey),
+                                    borderRadius: BorderRadius.circular(5.r)),
+                                child: Center(
+                                  child: Icon(
+                                    Icons.remove,
+                                    size: 20.h,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10.w,
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(bottom: 5.h),
+                              child: CustomText(
+                                '1',
+                                fontSize: 25.sp,
+                              ),
+                            ),
+                            SizedBox(
+                              width: 10.w,
+                            ),
+                            GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                height: 24.h,
+                                width: 22.w,
+                                decoration: BoxDecoration(
+                                    border: Border.all(color: Colors.grey),
+                                    borderRadius: BorderRadius.circular(5.r)),
+                                child: Center(
+                                  child: Icon(
+                                    Icons.add,
+                                    size: 20.h,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(
+          height: 22.h,
+        ),
+      ],
+    );
+  }
+}
