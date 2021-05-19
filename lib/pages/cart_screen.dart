@@ -12,7 +12,7 @@ class CartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     List products = [];
     return !products.isEmpty
-        ? Scaffold(backgroundColor: Colors.white, body: EmptyCart())
+        ? Scaffold(body: EmptyCart())
         : Scaffold(
             bottomSheet: Padding(
               padding: EdgeInsets.symmetric(horizontal: 10.w),
@@ -29,13 +29,20 @@ class CartScreen extends StatelessWidget {
                       SizedBox(
                         width: 10.w,
                       ),
-                      CustomText("الاجمالي :"),
+                      CustomText(
+                        "الاجمالي :",
+                        color: Get.isDarkMode
+                            ? AppColors.primaryColor
+                            : Colors.black,
+                      ),
                       SizedBox(
                         width: 10.w,
                       ),
                       CustomText(
                         "20 شيكل ",
-                        color: AppColors.primaryColor,
+                        color: Get.isDarkMode
+                            ? Colors.white
+                            : AppColors.primaryColor,
                       ),
                       Spacer(),
                       Container(
@@ -52,13 +59,14 @@ class CartScreen extends StatelessWidget {
                 ),
               ),
             ),
-            backgroundColor: Colors.white,
             appBar: AppBar(
+                backgroundColor:
+                    Get.isDarkMode ? Colors.transparent : Colors.white,
                 automaticallyImplyLeading: false,
-                backgroundColor: Colors.white,
                 centerTitle: true,
                 title: CustomText(
                   "السلة",
+                  color: Get.isDarkMode ? AppColors.primaryColor : Colors.black,
                   fontSize: 25.sp,
                 ),
                 elevation: 0.0,

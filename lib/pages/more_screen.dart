@@ -21,8 +21,7 @@ class _MoreScreenState extends State<MoreScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            backgroundColor: context.theme.backgroundColor,
-
+      backgroundColor: context.theme.backgroundColor,
       body: SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
@@ -105,40 +104,28 @@ class _MoreScreenState extends State<MoreScreen> {
               height: 20.h,
             ),
             MoreScreenItem(
-              imagename: 'user',
+              imagename: 'mail',
               onTap: () {},
-              title: "sjldsjldjls",
-              subtitle: "sdsdsds",
+              title: "البريد الالكتروني",
+              subtitle: "hadi@gmail.com",
             ),
             MoreScreenItem(
-              imagename: 'user',
+              imagename: 'call',
               onTap: () {},
-              title: "sjldsjldjls",
-              subtitle: "sdsdsds",
+              title: "رقم الهاتف",
+              subtitle: "0567609085",
             ),
             MoreScreenItem(
-              imagename: 'user',
+              imagename: 'truck',
               onTap: () {},
-              title: "sjldsjldjls",
-              subtitle: "sdsdsds",
+              title: "عنوان التوصيل",
+              subtitle: "غزة ",
             ),
             MoreScreenItem(
-              imagename: 'user',
+              imagename: 'calendar',
               onTap: () {},
-              title: "sjldsjldjls",
-              subtitle: "sdsdsds",
-            ),
-            MoreScreenItem(
-              imagename: 'user',
-              onTap: () {},
-              title: "sjldsjldjls",
-              subtitle: "sdsdsds",
-            ),
-            MoreScreenItem(
-              imagename: 'user',
-              onTap: () {},
-              title: "sjldsjldjls",
-              subtitle: "sdsdsds",
+              title: "تاريخ التسجيل",
+              subtitle: "25/5/2021",
             ),
             Padding(
               padding: EdgeInsets.only(right: 25.w),
@@ -184,12 +171,12 @@ class _MoreScreenState extends State<MoreScreen> {
                             height: 40.h,
                             width: 35.w,
                             decoration: BoxDecoration(
-                              color: Colors.grey[100],
+                              color: Colors.grey[200],
                               borderRadius: BorderRadius.circular(10.r),
                             ),
                             child: Center(
                               child: CustomSvgImage(
-                                imageName: "user",
+                                imageName: "night-mode",
                                 height: 25.h,
                                 width: 25.w,
                                 color: Colors.black,
@@ -206,10 +193,12 @@ class _MoreScreenState extends State<MoreScreen> {
                                 height: 10.h,
                               ),
                               CustomText(
-                                "الوضع الداكن",
+                                Get.isDarkMode
+                                    ? "الوضع الفاتح"
+                                    : "الوضع الداكن",
                                 fontSize: 20.sp,
                                 color: Get.isDarkMode
-                                    ? Colors.white
+                                    ? AppColors.primaryColor
                                     : Colors.black,
                               ),
                             ],
@@ -261,12 +250,12 @@ class _MoreScreenState extends State<MoreScreen> {
                           height: 40.h,
                           width: 35.w,
                           decoration: BoxDecoration(
-                            color: Colors.grey[100],
+                            color: Colors.grey[200],
                             borderRadius: BorderRadius.circular(10.r),
                           ),
                           child: Center(
                             child: CustomSvgImage(
-                              imageName: "user",
+                              imageName: "logout",
                               height: 25.h,
                               width: 25.w,
                               color: Colors.black,
@@ -285,8 +274,9 @@ class _MoreScreenState extends State<MoreScreen> {
                             CustomText(
                               "تسجيل الخروج",
                               fontSize: 20.sp,
-                              color:
-                                  Get.isDarkMode ? Colors.white : Colors.black,
+                              color: Get.isDarkMode
+                                  ? AppColors.primaryColor
+                                  : Colors.black,
                             ),
                           ],
                         ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:get/get.dart';
+import 'package:palestine_app/value/colors.dart';
 import 'package:palestine_app/widgets/custom_image.dart';
 import 'package:palestine_app/widgets/custom_text.dart';
 
@@ -64,7 +65,8 @@ class _FullCartState extends State<FullCart> {
                       decoration: BoxDecoration(
                           image: DecorationImage(
                               fit: BoxFit.fill,
-                              image: AssetImage('assets/images/product.png')),
+                              image: NetworkImage(
+                                  'https://feedvisor.com/wp-content/uploads/2019/07/What-reports-are-needed-for-sponsored-products-advertising.jpg')),
                           borderRadius: BorderRadius.only(
                               topRight: Radius.circular(20.r),
                               bottomRight: Radius.circular(20.r))),
@@ -75,13 +77,25 @@ class _FullCartState extends State<FullCart> {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        CustomText("تايتل 1 1 1"),
+                        CustomText(
+                          "تايتل 1 1 1",
+                          color: Get.isDarkMode
+                              ? AppColors.primaryColor
+                              : Colors.black,
+                        ),
                         // Spacer(),
 
-                        CustomText("السعر : 25 شيكل"),
+                        CustomText(
+                          "السعر : 25 شيكل",
+                          color: Get.isDarkMode ? Colors.white : Colors.black,
+                        ),
                         Row(
                           children: [
-                            CustomText("الكمية"),
+                            CustomText(
+                              "الكمية",
+                              color:
+                                  Get.isDarkMode ? Colors.white : Colors.black,
+                            ),
                             SizedBox(
                               width: 80.w,
                             ),
@@ -108,6 +122,9 @@ class _FullCartState extends State<FullCart> {
                               padding: EdgeInsets.only(bottom: 5.h),
                               child: CustomText(
                                 '1',
+                                color: Get.isDarkMode
+                                    ? AppColors.primaryColor
+                                    : Colors.black,
                                 fontSize: 25.sp,
                               ),
                             ),

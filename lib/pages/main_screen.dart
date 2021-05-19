@@ -6,6 +6,8 @@ import 'package:palestine_app/widgets/custom_nav_bar.dart';
 import 'package:palestine_app/pages/more_screen.dart';
 import 'package:palestine_app/pages/cart_screen.dart';
 
+import 'home_screen.dart';
+
 class MainScreen extends StatefulWidget {
   @override
   _MainScreenState createState() => _MainScreenState();
@@ -29,7 +31,7 @@ class _MainScreenState extends State<MainScreen> {
 
 class PageNav {
   static List<Widget> widgetOptions = <Widget>[
-    Container(),
+    HomeScreen(),
     Container(),
     CartScreen(),
     MoreScreen(),
