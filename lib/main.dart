@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:global_network/global_network.dart';
 import 'package:palestine_app/services/theme_notifier.dart';
 import 'package:palestine_app/splash.dart';
 import 'package:palestine_app/services/theme.dart';
@@ -14,7 +15,7 @@ void main() async {
     statusBarColor: Colors.transparent,
     statusBarIconBrightness: Brightness.dark,
     statusBarBrightness:
-        Platform.isAndroid ? Brightness.dark : Brightness.light,
+        Platform.isAndroid ? Brightness.light : Brightness.light,
     systemNavigationBarColor: Colors.white,
     systemNavigationBarDividerColor: Colors.grey,
     systemNavigationBarIconBrightness: Brightness.dark,
