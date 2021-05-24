@@ -81,7 +81,7 @@ class CustomNavBottom extends StatelessWidget {
                     height: 5.h,
                   ),
                   CustomText(
-                    'التصنيفات',
+                    'كل المنتجات',
                     fontSize: 15.sp,
                     color: AppColors.primaryColor,
                   ),
@@ -100,7 +100,7 @@ class CustomNavBottom extends StatelessWidget {
                     height: 5.h,
                   ),
                   CustomText(
-                    'التصنيفات',
+                    'كل المنتجات',
                     fontSize: 15.sp,
                     color: Colors.grey,
                   ),

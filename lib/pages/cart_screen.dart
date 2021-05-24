@@ -14,6 +14,8 @@ class CartScreen extends StatelessWidget {
     return !products.isEmpty
         ? Scaffold(body: EmptyCart())
         : Scaffold(
+            backgroundColor:
+                !Get.isDarkMode ? Colors.white : Colors.grey.shade900,
             bottomSheet: Padding(
               padding: EdgeInsets.symmetric(horizontal: 10.w),
               child: Container(

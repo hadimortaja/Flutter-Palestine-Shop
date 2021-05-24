@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:palestine_app/pages/all_products_screen.dart';
 import 'package:palestine_app/server/app_get.dart';
 import 'package:palestine_app/widgets/custom_nav_bar.dart';
 import 'package:palestine_app/pages/more_screen.dart';
 import 'package:palestine_app/pages/cart_screen.dart';
 
+import 'category_screen.dart';
 import 'home_screen.dart';
 
 class MainScreen extends StatefulWidget {
@@ -32,7 +34,7 @@ class _MainScreenState extends State<MainScreen> {
 class PageNav {
   static List<Widget> widgetOptions = <Widget>[
     HomeScreen(),
-    Container(),
+    AllProductsScreen(),
     CartScreen(),
     MoreScreen(),
   ];

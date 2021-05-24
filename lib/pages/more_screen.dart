@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:palestine_app/pages/favorite_screen.dart';
 import 'package:palestine_app/services/theme_notifier.dart';
 import 'package:palestine_app/value/colors.dart';
 import 'package:palestine_app/widgets/custom_image.dart';
@@ -79,6 +80,20 @@ class _MoreScreenState extends State<MoreScreen> {
             ),
             SizedBox(
               height: 30.h,
+            ),
+            MoreScreenItem(
+              imagename: 'mail',
+              onTap: () {
+                Get.to(() => FavoriteScreen());
+              },
+              title: "المفضلة",
+              // subtitle: "hadi@gmail.com",
+            ),
+            MoreScreenItem(
+              imagename: 'mail',
+              onTap: () {},
+              title: "السلة",
+              // subtitle: "hadi@gmail.com",
             ),
             Padding(
               padding: EdgeInsets.only(right: 25.w),

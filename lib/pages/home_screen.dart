@@ -8,6 +8,7 @@ import 'package:palestine_app/value/colors.dart';
 import 'package:palestine_app/widgets/category_item.dart';
 import 'package:palestine_app/widgets/custom_image.dart';
 import 'package:palestine_app/widgets/custom_text.dart';
+import 'package:palestine_app/widgets/popular_item.dart';
 
 class HomeScreen extends StatelessWidget {
   List<String> images = [
@@ -145,7 +146,7 @@ class HomeScreen extends StatelessWidget {
               height: 10.h,
             ),
             Container(
-              height: 180.h,
+              height: 150.h,
               width: Get.width,
               child: SizedBox(
                 width: Get.width,
@@ -162,7 +163,50 @@ class HomeScreen extends StatelessWidget {
                   itemCount: 7,
                 ),
               ),
-            )
+            ),
+            Padding(
+              padding: EdgeInsets.only(right: 20.w, left: 20.w),
+              child: Directionality(
+                textDirection: TextDirection.rtl,
+                child: Row(
+                  children: [
+                    CustomText(
+                      "الأكثر أهمية",
+                      color: Get.isDarkMode
+                          ? AppColors.primaryColor
+                          : Colors.black,
+                    ),
+                    Spacer(),
+                    CustomText("رؤية الكل",
+                        fontSize: 18.sp, color: AppColors.primaryColor),
+                  ],
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10.h,
+            ),
+            Container(
+              margin: EdgeInsets.symmetric(horizontal: 10.w),
+              height: 250.h,
+              width: Get.width,
+              child: SizedBox(
+                width: Get.width,
+                child: ListView.builder(
+                  reverse: true,
+                  scrollDirection: Axis.horizontal,
+                  shrinkWrap: true,
+                  primary: false,
+                  itemBuilder: (context, index) {
+                    return PopularItem();
+                  },
+                  itemCount: 7,
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 20.h,
+            ),
           ],
         ),
       ),
